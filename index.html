@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jarvis</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body onload="jarvisStartingReply()">
+    <div class="scroll">
+      <div id="leftmenu">
+        <div id="date_time">
+          <div id="date" class="semi_arc e4">
+            <div class="semi_arc_2 e4_1">
+              <div class="counterspin4"></div>
+            </div>
+            <div style="font-size: 40px; margin-top: 25px" id="dateValue"></div>
+            <div style="font-size: 25px" id="monthValue"></div>
+          </div>
+
+          <div id="time" class="arc e1">
+            <div
+              style="font-size: 23px; margin-left: -10px; margin-top: 23px"
+              id="timeValue"
+            ></div>
+            <div
+              style="font-size: 17px; margin-top: 10px"
+              id="weekDayValue"
+            ></div>
+          </div>
+        </div>
+
+        <p class="title">Performance</p>
+        <div class="hline title_underline"></div>
+        
+        <span
+          class="menuitem entypo-gauge"
+          style="font-size: 30px; margin-left: 10px"
+        >
+          <p id="cpu" class="caption" style="font-size: 20px"></p>
+        </span>
+        <br />
+
+        <span
+          class="menuitem entypo-chart-area"
+          style="font-size: 30px; margin-left: 10px"
+        >
+          <p id="ram" class="caption" style="font-size: 20px"></p>
+        </span>
+        <br />
+
+        <span
+          class="menuitem entypo-chart-pie"
+          style="font-size: 30px; margin-left: 10px"
+        >
+          <p id="proc" class="caption" style="font-size: 20px"></p>
+        </span>
+
+        <p class="title">Social</p>
+        <div class="hline title_underline"></div>
+        <div class="" style="display: flex; justify-content: center;">
+          <a href="https://github.com/programest" target="_blank">
+            <i class="fa-brands fa-github fa-2x"></i>
+        </a>
+        
+        <a href="https://t.me/AdilJust" target="_blank">
+            <i class="fa-brands fa-telegram fa-2x"></i>
+        </a>
+        
+        <a href="https://wa.me/+77714110705" target="_blank">
+            <i class="fa-brands fa-whatsapp fa-2x"></i>
+        </a>
+        
+        </div>
+        
+    
+      </div>
+
+      <!-- Right Menu -->
+      <div id="rightmenu">
+        <p class="title" style="text-align: left; margin-left: 10px">Notes</p>
+        <div id="particle10" class="hline"></div>
+        <div id="particle11" class="hline"></div>
+        <div id="particle12" class="vline"></div>
+        <textarea id="note_input" rows="12" cols="44">
+        This application is designed to make it easy to switch between gaming and work modes. It can be customized further
+          Game mode:
+          - Turn off additional monitors
+          - Transfer sound to headphones
+          Work mode:
+          - Turn on all monitors
+          - Transfer sound to speakers
+          You can also monitor the system and how loaded it is</textarea
+        >
+       
+        
+        <!-- <div id="weather_Name" style="font-size: 15px; top: 10px;left: 200px;"></div> -->
+        <div id="time1" class="arc e1">
+          <!-- <div style="font-size: 23px; margin-left: -10px; margin-top: 23px;">23:41</div>
+          <div style="font-size: 15px; margin-left: 40px; margin-top: -30px; display: inline;">31</div>
+          <div style="font-size: 17px; margin-top: 10px;">Tuesday</div> -->
+          <div id="weatherImage" style="border-radius: 50%"></div>
+        </div>
+
+        
+        <div id="text">
+          <p id="output" class="outputVoice">Говорите...</p>
+        </div>
+        <div class="btns ">
+          <button id="workMode"><span>Рабочий режим</span></button>
+          <button id="gameMode"><span>Игровой режим</span></button>
+        </div>
+
+
+      </div>
+
+      <!-- Arc Reactor -->
+      <button id="microphoneButton">
+        <div id="arc_container">
+          <!-- <div id="titleBar" style="align-items: center;">
+        <div id="pointer" style="color: black;font-size: 20px;display: inline;">Hello</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div id="pointer" style="color: black;font-size: 30px;display: inline;">Hello</div>
+      </div>  -->
+
+          <div class="arc_reactor">
+            <div class="case_container">
+              <div class="e7">
+                <div class="semi_arc_3 e5_1">
+                  <div class="semi_arc_3 e5_2">
+                    <div class="semi_arc_3 e5_3">
+                      <div class="semi_arc_3 e5_4" id="mainCircle"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="core2"></div>
+              </div>
+              <ul class="marks">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </button>
+      <!-- Particles -->
+      <!-- Left Menu Particles -->
+      <canvas id="particle1" width="20" height="500"></canvas>
+      <canvas id="particle1_1" width="40" height="510"></canvas>
+      <canvas id="particle1_2" width="40" height="510"></canvas>
+    
+
+      <div id="particle1_3">> > > ></div>
+
+      <div id="particle2">▶<br />▶<br />▶</div>
+      <div id="particle3" class="vline" />
+      <div id="particle4" class="vline" />
+      <div id="particle5" class="vline" />
+      <div id="particle6" class="vline" />
+      <div id="particle7" class="vline" />
+      <div id="particle8" class="vline" />
+      <div id="particle9" class="vline" />
+    </div>
+    <script src="./module.js"></script>
+  </body>
+</html>

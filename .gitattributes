@@ -1,0 +1,2 @@
+resources/ggml-base.bin filter=lfs diff=lfs merge=lfs -text
+dist/win-unpacked/resources/ggml-base.bin filter=lfs diff=lfs merge=lfs -text
